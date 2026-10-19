@@ -158,8 +158,8 @@ p{margin:0}
 .offer-card .ph{width:100%;aspect-ratio:16/10;border-radius:16px;margin-bottom:18px}
 .offer-card .from{font-size:17px;color:var(--ink2)}
 .offer-card .parc{font-size:15px;color:var(--ink2)}
-.offer-card .price{font-family:var(--display);font-weight:800;font-size:clamp(64px,10vw,88px);line-height:1;color:var(--green);letter-spacing:-0.03em}
-.offer-card .cash{font-size:15px;color:var(--ink2);margin-bottom:18px}
+.offer-card .price{font-family:var(--display);font-weight:800;font-size:clamp(46px,9vw,80px);line-height:1.05;color:var(--green);letter-spacing:-0.03em;white-space:nowrap;margin:6px 0 4px}
+.offer-card .cash{font-size:18px;font-weight:500;color:var(--ink2);margin-bottom:20px}
 .offer-card .btn{width:100%}
 .seals{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin-top:16px;font-size:14px;color:var(--ink2)}
 .seals span{display:flex;align-items:center;gap:6px}
@@ -411,9 +411,8 @@ footer a{color:#fff}
     <div class="offer-card reveal">
       <img class="combo" src="img/mockup-combo.jpg" alt="Os 5 materiais da Calculadora do Futuro do Meu Filho" loading="lazy" width="1100" height="1005">
       <p class="from">De <s>R$ 295</s> por apenas</p>
-      <p class="parc js-parcelamento"></p>
-      <p class="price">R$ 67</p>
-      <p class="cash">à vista</p>
+      <p class="price js-price-main">R$ 67</p>
+      <p class="cash js-price-sub">à vista</p>
       <a id="cta-oferta-1" class="btn js-checkout" href="#oferta">SIM, EU QUERO PREPARAR O FUTURO DO MEU FILHO</a>
       <div class="seals">
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3D4A5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Compra segura</span>
@@ -475,9 +474,8 @@ footer a{color:#fff}
         <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Bônus 2: Carta para o Seu Filho Ler aos 18 anos</li>
       </ul>
       <p class="from">De <s>R$ 295</s> por apenas</p>
-      <p class="parc js-parcelamento"></p>
-      <p class="price">R$ 67</p>
-      <p class="cash">à vista</p>
+      <p class="price js-price-main">R$ 67</p>
+      <p class="cash js-price-sub">à vista</p>
       <a id="cta-oferta-2" class="btn js-checkout" href="#oferta">SIM, EU QUERO PREPARAR O FUTURO DO MEU FILHO</a>
       <div class="seals">
         <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3D4A5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Compra segura</span>
@@ -527,11 +525,16 @@ footer a{color:#fff}
 <script>
 /* ===== CONFIGURAÇÃO ===== */
 const CHECKOUT_URL = "#oferta";
-const PARCELAMENTO = "[PREENCHER PARCELAMENTO]";
+const PARCELAMENTO = "5x R$ 14,84"; /* conferir no checkout */
 
 /* Aplica link de checkout e texto de parcelamento */
 document.querySelectorAll('.js-checkout').forEach(a => a.href = CHECKOUT_URL);
-document.querySelectorAll('.js-parcelamento').forEach(el => el.textContent = PARCELAMENTO);
+/* Preço: parcelado em destaque e à vista embaixo. Sem PARCELAMENTO preenchido, mostra só o valor à vista. */
+const PRECO_A_VISTA = "R$ 67,00";
+if (PARCELAMENTO && !PARCELAMENTO.startsWith('[')) {
+  document.querySelectorAll('.js-price-main').forEach(el => el.textContent = PARCELAMENTO);
+  document.querySelectorAll('.js-price-sub').forEach(el => el.textContent = 'ou ' + PRECO_A_VISTA + ' à vista');
+}
 
 /* Animações de entrada */
 const revealEls = document.querySelectorAll('.reveal');
