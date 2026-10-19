@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Calculadora do Futuro do Meu Filho — Descubra quanto investir por mês em uma única noite</title>
-<meta name="description" content="Descubra com clareza quanto investir por mês para dar um futuro melhor ao seu filho e como ensinar educação financeira para ele — em uma única noite.">
+<title>Calculadora do Futuro do Meu Filho — Quanto investir por mês para o futuro do seu filho</title>
+<meta name="description" content="Descubra como montar o plano de investimento do seu filho com a calculadora que mostra quanto investir por mês para o futuro dele.">
 <meta property="og:title" content="Calculadora do Futuro do Meu Filho">
-<meta property="og:description" content="Descubra quanto investir por mês para o futuro do seu filho e ensine ele a lidar com dinheiro — em uma única noite.">
-<meta property="og:image" content="https://rafaelgarbelini.com.br/img/hero_depois.jpg">
-<meta property="og:url" content="https://rafaelgarbelini.com.br/">
+<meta property="og:description" content="Descubra como montar o plano de investimento do seu filho com a calculadora que mostra quanto investir por mês para o futuro dele.">
+<meta property="og:image" content="https://rafaelgarbelini.com.br/calculadora/img/hero_depois.jpg">
+<meta property="og:url" content="https://rafaelgarbelini.com.br/calculadora/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta name="theme-color" content="#0E1A2B">
@@ -58,6 +58,8 @@ p{margin:0}
 /* 01 HERO */
 .topbar{background:var(--amber);color:var(--night);padding:10px 20px;text-align:center;font-weight:700;font-size:12px;letter-spacing:.08em;line-height:1.45;text-transform:uppercase}
 .hero-in{max-width:1040px;margin:0 auto;padding:clamp(40px,7vw,80px) 20px clamp(48px,8vw,96px);display:flex;flex-direction:column;align-items:center;text-align:center}
+.logo{width:100%;display:flex;justify-content:center}
+.logo img{width:100%;max-width:760px;height:auto}
 .pill{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--amber);color:var(--amber);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:500}
 .pill i{width:6px;height:6px;border-radius:50%;background:var(--amber)}
 .hero h1{font-size:clamp(27px,4.6vw,50px);line-height:1.12;letter-spacing:-0.02em;margin-top:24px;max-width:940px;text-wrap:balance}
@@ -67,6 +69,10 @@ p{margin:0}
 .ba figure{margin:0;position:relative;border-radius:clamp(14px,2vw,22px);overflow:hidden;aspect-ratio:4/5;background:var(--card)}
 .ba img{width:100%;height:100%;object-fit:cover}
 .ba figcaption{position:absolute;left:50%;bottom:clamp(10px,2vw,18px);transform:translateX(-50%);border-radius:999px;padding:7px 14px;font-size:clamp(11px,1.6vw,14px);font-weight:700;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.rum{position:absolute;top:clamp(8px,1.6vw,16px);left:clamp(8px,1.6vw,16px);right:8px;display:flex;align-items:center;gap:clamp(4px,.8vw,8px)}
+.rum-ico{flex:none;width:clamp(26px,4vw,44px);height:clamp(26px,4vw,44px);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.rum-ico svg{width:55%;height:55%}
+.rum-txt{color:#fff;border-radius:999px;padding:clamp(5px,.9vw,10px) clamp(10px,1.8vw,20px);font-family:var(--display);font-weight:800;font-size:clamp(11px,1.9vw,20px);line-height:1.15;box-shadow:0 4px 14px rgba(0,0,0,.3)}
 .tag-antes{background:#fff;color:#7A1F2B}
 .tag-depois{background:var(--amber);color:var(--night)}
 
@@ -75,6 +81,8 @@ p{margin:0}
 .depo .ph{min-height:220px;border-color:#C9CDD4;border-radius:20px;flex-direction:column;justify-content:space-between;align-items:flex-start;padding:28px;gap:20px;text-align:left}
 
 /* 03 DOR */
+.dor-photo{max-width:960px;margin:clamp(32px,5vw,48px) auto 0;border-radius:24px;overflow:hidden;background:var(--night)}
+.dor-photo img{width:100%;height:auto}
 .dor-intro{font-size:18px;line-height:1.65;color:var(--ink2);margin-top:20px;max-width:680px;display:flex;flex-direction:column;gap:12px}
 .dor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(24px,4vw,48px);margin-top:clamp(32px,5vw,48px);align-items:center}
 .thoughts{display:flex;flex-direction:column;gap:12px}
@@ -96,8 +104,9 @@ p{margin:0}
 
 /* 05 BENEFÍCIOS */
 .bens{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));margin-top:clamp(32px,5vw,52px)}
-.ben{background:var(--card);border-radius:22px;padding:clamp(24px,3vw,32px);display:flex;flex-direction:column;gap:12px}
-.ben h3{font-size:clamp(19px,2.2vw,22px);line-height:1.25;color:var(--amber)}
+.ben{background:var(--card);border-radius:22px;padding:clamp(24px,3vw,32px);display:flex;align-items:center;gap:20px}
+.ben-ico{flex:none;width:64px;height:64px;border-radius:18px;background:var(--night);display:flex;align-items:center;justify-content:center}
+.ben h3{font-size:clamp(19px,2.2vw,22px);line-height:1.25;color:#fff}
 .ben p{font-size:16px;line-height:1.65;color:var(--light)}
 
 /* 06 ENTREGÁVEIS */
@@ -106,7 +115,8 @@ p{margin:0}
 .item.rev{flex-wrap:wrap-reverse}
 .item > *{flex:1 1 320px}
 .item .media{aspect-ratio:4/3;border-radius:22px;overflow:hidden}
-.item .media img{width:100%;height:100%;object-fit:cover}
+.item .media img{width:100%;height:100%;object-fit:contain}
+.bonus .media img.contain{object-fit:contain;padding:12px}
 .item-text{display:flex;flex-direction:column;gap:12px}
 .item-text h3{font-size:clamp(24px,3vw,32px);line-height:1.15}
 .item-text p{font-size:17px;line-height:1.65;color:var(--ink2)}
@@ -115,7 +125,7 @@ p{margin:0}
 .more p{margin:12px auto 0;max-width:620px;font-size:clamp(18px,2.2vw,21px);line-height:1.5;font-weight:500}
 .bonus-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));margin-top:clamp(32px,5vw,48px)}
 .bonus{background:var(--night);color:#fff;border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
-.bonus .media{aspect-ratio:16/10;background:var(--card)}
+.bonus .media{aspect-ratio:1/1;background:var(--card)}
 .bonus .media img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .bonus .ph{background:var(--card);border-color:#3D5577;color:var(--light);border-radius:24px 24px 0 0;height:100%}
 .bonus-body{padding:clamp(24px,3vw,32px);display:flex;flex-direction:column;gap:10px}
@@ -142,6 +152,9 @@ p{margin:0}
 /* 09 / 12 OFERTA */
 .offer-card{background:#fff;color:var(--ink);border-radius:24px;max-width:520px;margin:clamp(32px,5vw,48px) auto 0;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;box-shadow:0 20px 50px rgba(14,26,43,.08)}
 .offer-card.bordered{border:1px solid var(--line)}
+.img-slot{position:relative;overflow:hidden}
+.img-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#fff}
+.offer-card .combo{width:100%;height:auto;margin-bottom:18px}
 .offer-card .ph{width:100%;aspect-ratio:16/10;border-radius:16px;margin-bottom:18px}
 .offer-card .from{font-size:17px;color:var(--ink2)}
 .offer-card .parc{font-size:15px;color:var(--ink2)}
@@ -176,6 +189,8 @@ p{margin:0}
 .author-text h2{font-size:clamp(28px,3.6vw,40px);line-height:1.15}
 .author-text p{font-size:17px;line-height:1.65;color:var(--ink2)}
 .author-text .quote{font-size:18px;line-height:1.6;color:var(--ink);font-weight:500}
+.author-text .role{color:var(--amber-dark);font-weight:700;line-height:1.45}
+.author-close{background:var(--amber-soft);border-radius:20px;padding:clamp(20px,3vw,28px);margin-top:8px;font-size:18px;line-height:1.6;font-weight:500;text-wrap:pretty}
 .author-text hr{border:0;height:1px;background:var(--line);margin:10px 0;width:100%}
 
 /* 13 FAQ */
@@ -192,6 +207,8 @@ p{margin:0}
 /* 14 RODAPÉ */
 footer{background:var(--night);color:var(--light);padding:48px 20px;text-align:center;font-size:13px;line-height:1.65}
 footer .in{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:14px;align-items:center}
+footer .f-name{font-family:var(--display);font-weight:800;font-size:18px;color:#fff}
+footer .small{font-size:12px;color:#9AA8BA}
 footer .links{display:flex;gap:10px;align-items:center}
 footer a{color:#fff}
 
@@ -211,19 +228,18 @@ footer a{color:#fff}
 
 <!-- 01 HERO -->
 <header class="hero dark">
-  <div class="topbar">Para pais que não querem mais deixar o futuro dos filhos para depois</div>
   <div class="hero-in">
-    <div class="pill reveal"><i></i>Calculadora do Futuro do Meu Filho</div>
-    <h1 class="reveal">Descubra com clareza quanto investir por mês para dar um futuro melhor ao seu filho e como ensinar educação financeira para ele não torrar o dinheiro que você levou anos para construir — <span>em uma única noite.</span></h1>
-    <p class="sub reveal">Coloque a idade do seu filho, escolha o futuro que deseja construir para ele e transforme o ‘eu já devia ter começado’ em um plano claro para começar agora.</p>
+    <div class="logo reveal"><img src="img/logo.png" alt="Calculadora do Futuro do Meu Filho — Para pais que não querem mais deixar o futuro dos filhos para depois" width="1980" height="474"></div>
+    <h1 class="reveal">Descubra como montar o plano de investimento do seu filho com a calculadora que mostra <span style="color:#F2A93B">quanto investir por mês para o futuro dele.</span></h1>
+    <p class="sub reveal">Coloque a idade, escolha o objetivo e o prazo. Transforme o “eu já devia ter começado” em um plano claro para começar ainda hoje.</p>
     <div class="ba reveal">
       <figure>
         <img src="img/hero_antes.jpg" alt="Pai preocupado à noite diante do notebook" width="1000" height="1250">
-        <figcaption class="tag-antes">Já devia ter começado</figcaption>
+        <div class="rum"><span class="rum-ico" style="background:#E53935"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10M17 7L7 17"></path></svg></span><span class="rum-txt" style="background:#C62828">Já devia ter começado</span></div>
       </figure>
       <figure>
-        <img src="img/hero_depois.jpg" alt="Pai sorrindo, tranquilo, diante do notebook" width="1000" height="1250">
-        <figcaption class="tag-depois">Agora eu sei quanto</figcaption>
+        <img src="img/hero_depois.jpg" alt="Pai e filho sorrindo diante do notebook" width="1200" height="900" style="object-position:42% center">
+        <div class="rum"><span class="rum-ico" style="background:#22C55E"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span class="rum-txt" style="background:#16A34A">Agora sei o que devo fazer</span></div>
       </figure>
     </div>
   </div>
@@ -246,27 +262,12 @@ footer a{color:#fff}
 <!-- 03 DOR -->
 <section class="sec white">
   <div class="wrap">
-    <h2 class="h2 reveal" style="max-width:800px">Seu filho está crescendo. Mas o plano para o futuro dele continua no ‘depois eu vejo’.</h2>
-    <div class="dor-intro reveal">
-      <p>Você trabalha pra caramba. Paga escola. Plano de saúde. Roupa. Viagem. Aniversário.</p>
-      <p>Faz de tudo para dar uma vida boa para seu filho hoje. Mas quando pensa no futuro, aquelas mesmas perguntas aparecem:</p>
-    </div>
-    <div class="dor-grid">
-      <div class="thoughts">
-        <div class="thought reveal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg><span>“Eu já devia ter começado.”</span></div>
-        <div class="thought reveal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg><span>“Quanto eu deveria investir por mês?”</span></div>
-        <div class="thought reveal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg><span>“Eu quero ensinar meu filho sobre dinheiro, mas nem sei por onde começar.”</span></div>
-        <div class="thought reveal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg><span>“Eu não quero que meu filho comece do zero como eu comecei.”</span></div>
-        <div class="thought reveal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg><span>“Tenho medo de dar tudo pro meu filho e criar alguém que não sabe dar valor ao dinheiro.”</span></div>
-      </div>
-      <div class="photo reveal"><img src="img/foto-dor.jpg" alt="Pai preocupado no sofá à noite, olhando o celular" loading="lazy" width="1000" height="1250"></div>
-    </div>
+    <h2 class="h2 center reveal" style="max-width:820px">Seu filho está crescendo. Mas o plano de investimento para o futuro dele continua no ‘depois eu vejo’.</h2>
+    <div class="dor-photo reveal"><img src="img/foto-dor.jpg" alt="Pai preocupado à noite no sofá, olhando o celular, com cinco pensamentos sobre o futuro do filho" loading="lazy" width="1448" height="1086"></div>
     <div class="dor-text reveal">
-      <p class="lead">Talvez o problema nem seja faltar dinheiro.</p>
-      <p>É não saber quanto guardar, onde colocar, em nome de quem deixar e como preparar seu filho para receber esse patrimônio.</p>
-      <p>Você pesquisa. Um fala previdência. Outro fala Tesouro. Outro fala ETF. Outro manda abrir conta no nome da criança. E aquilo que deveria ser simples vira uma confusão.</p>
-      <p>Então você pensa: ‘Depois eu vejo isso com calma.’</p>
-      <p>Só que existe uma coisa que não espera: <strong>seu filho continua crescendo.</strong></p>
+      <p class="lead">Eu sei, você até quer dar um futuro melhor para seu filho…</p>
+      <p>Mas não sabe quanto guardar, onde investir, em nome de quem deixar e como preparar seu filho para receber esse dinheiro no futuro.</p>
+      <p>Você pesquisa. Um fala para você investir em previdência. Outro fala Tesouro. Outro fala ETF. Outro manda abrir conta no nome da criança. E aquilo que deveria ser simples vira uma confusão.</p>
     </div>
     <div class="amber-box reveal">Agora imagine descobrir, em uma única noite, quanto investir por mês e sair com um caminho claro para preparar não apenas o dinheiro para o seu filho, mas também o seu filho para esse dinheiro.</div>
   </div>
@@ -302,10 +303,10 @@ footer a{color:#fff}
   <div class="wrap">
     <h2 class="h2 center reveal">Com esse passo a passo, você vai:</h2>
     <div class="grid bens">
-      <div class="ben reveal"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/></svg><h3>Saber quanto investir por mês</h3><p>Chega de escolher R$ 200, R$ 500 ou R$ 1.000 no chute. Coloque seu objetivo no papel e visualize quanto precisa investir de acordo com o cenário escolhido.</p></div>
-      <div class="ben reveal"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/></svg><h3>Parar de adiar porque não sabe por onde começar</h3><p>Tenha clareza sobre as principais decisões antes de simplesmente colocar dinheiro em qualquer lugar.</p></div>
-      <div class="ben reveal"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/></svg><h3>Construir um ponto de partida melhor para seu filho</h3><p>Faculdade, intercâmbio, primeiro imóvel ou independência: transforme o ‘quero ajudar meu filho’ em um objetivo financeiro concreto.</p></div>
-      <div class="ben reveal"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/></svg><h3>Transformar a mesada em aprendizado</h3><p>O problema não é a mesada, é a mesada sem estrutura. Ensine seu filho a gastar, guardar e doar o dinheiro que ele já recebe, e prepare-o para o patrimônio que um dia vai receber.</p></div>
+      <div class="ben reveal"><span class="ben-ico"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="2.5"></rect><path d="M8.5 6.5h7v3h-7zM8.5 13h.01M12 13h.01M15.5 13h.01M8.5 17h.01M12 17h.01M15.5 17h.01"></path></svg></span><h3>Saber quanto investir por mês</h3></div>
+      <div class="ben reveal"><span class="ben-ico"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="16" rx="2.5"></rect><path d="M8 3v4M16 3v4M3.5 10h17M9 15.2l2 2 4-4"></path></svg></span><h3>Parar de adiar porque não sabe por onde começar</h3></div>
+      <div class="ben reveal"><span class="ben-ico"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5L12 5l10 4.5L12 14z"></path><path d="M6 11.3V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-4.7M22 9.5V15"></path></svg></span><h3>Construir um ponto de partida melhor para seu filho</h3></div>
+      <div class="ben reveal"><span class="ben-ico"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 11c0-3.3-3.1-6-7-6S5 7.7 5 11c0 1.8.9 3.4 2.4 4.5V19h3v-2h3.2v2h3v-3.5c1-.7 1.7-1.5 2.1-2.5H21v-3h-2.1"></path><path d="M10 5.3V4.5a2 2 0 0 1 4 0v.8M15.5 10h.01"></path></svg></span><h3>Transformar a mesada em aprendizado</h3></div>
     </div>
     <p class="big-phrase reveal">Você levou anos para construir esse dinheiro. <span style="color:#F2A93B">Prepare seu filho para saber o que fazer com ele.</span></p>
   </div>
@@ -317,7 +318,7 @@ footer a{color:#fff}
     <h2 class="h2 center reveal" style="max-width:760px">Tudo que você recebe na Calculadora do Futuro do Meu Filho</h2>
     <div class="items">
       <div class="item reveal">
-        <div class="media"><img src="img/mockup-calculadora.jpg" alt="Pai e filha olhando a Calculadora de Aportes no notebook" loading="lazy"></div>
+        <div class="media"><img src="img/mockup-calculadora.jpg" alt="Calculadora de Aportes no notebook" loading="lazy"></div>
         <div class="item-text">
           <span class="label">ENTREGÁVEL 01</span>
           <h3>Calculadora de Aportes</h3>
@@ -327,16 +328,16 @@ footer a{color:#fff}
       <div class="item rev reveal">
         <div class="item-text">
           <span class="label">ENTREGÁVEL 02</span>
-          <h3>Guia das 5 Decisões</h3>
+          <h3>Como Investir para o Seu Filho do Jeito Certo</h3>
           <p>Um guia direto para entender as cinco decisões que mais travam os pais: titularidade, prazo, tipos de investimento, proteção patrimonial e entrega do dinheiro ao filho.</p>
         </div>
-        <div class="media"><img src="img/mockup-guia.jpg" alt="Pai e filha lendo o Guia das 5 Decisões" loading="lazy"></div>
+        <div class="media"><img src="img/mockup-guia.jpg" alt="Pai e filha lendo o Como Investir para o Seu Filho do Jeito Certo" loading="lazy"></div>
       </div>
       <div class="item reveal">
-        <div class="media"><img src="img/mockup-mesada.jpg" alt="Filha guardando moedas em potes com o pai" loading="lazy"></div>
+        <div class="media"><img src="img/mockup-mesada.jpg" alt="Planner Como Planejar a Mesada do Jeito Inteligente" loading="lazy"></div>
         <div class="item-text">
           <span class="label">ENTREGÁVEL 03</span>
-          <h3>Mesada com Estrutura</h3>
+          <h3>Como Planejar a Mesada do Jeito Inteligente</h3>
           <p>Um guia prático para organizar o dinheiro que seu filho já recebe, seja mesada, dinheiro da escola ou do cinema com os amigos: quanto dar em cada idade, o que esse dinheiro cobre, a regra do gastar / guardar / doar, o que fazer quando acaba antes do fim do mês e como conversar sobre isso sem brigar.</p>
         </div>
       </div>
@@ -347,18 +348,18 @@ footer a{color:#fff}
     </div>
     <div class="grid bonus-grid">
       <div class="bonus reveal">
-        <div class="media"><img src="img/mockup-conquista.jpg" alt="Filha pagando o próprio brinquedo no caixa ao lado do pai" loading="lazy"></div>
+        <div class="media"><img class="contain" src="img/mockup-conquista.jpg" alt="Planner Do Eu Quero ao Eu Conquistei" loading="lazy"></div>
         <div class="bonus-body">
           <span class="label">BÔNUS 1</span>
-          <h3>A Conquista</h3>
+          <h3>Do “Eu Quero” ao “Eu Conquistei”: o primeiro projeto do seu filho</h3>
           <p>Para os desejos que vão além da mesada. O primeiro projeto empreendedor entre pai e filho: a criança transforma o “eu quero” em objetivo, cria algo de valor, conquista o próprio dinheiro e descobre que é capaz.</p>
         </div>
       </div>
       <div class="bonus reveal">
-        <div class="media"><img src="img/mockup-carta.jpg" alt="Pai escrevendo a carta ao lado da filha" loading="lazy"></div>
+        <div class="media"><img class="contain" src="img/mockup-carta.jpg" alt="Caixa Carta para o Seu Filho Ler aos 18 anos" loading="lazy"></div>
         <div class="bonus-body">
           <span class="label">BÔNUS 2</span>
-          <h3>A Carta para os 18</h3>
+          <h3>Carta para o Seu Filho Ler aos 18 anos</h3>
           <p>Uma experiência para registrar aquilo que você gostaria que seu filho soubesse sobre dinheiro, trabalho, escolhas, responsabilidade e sobre o patrimônio que você está construindo para ele.</p>
         </div>
       </div>
@@ -390,15 +391,15 @@ footer a{color:#fff}
   <div class="wrap" style="max-width:680px">
     <h2 class="h2 center reveal"><span style="color:#B5650D">RECAPITULANDO…</span> Veja tudo que você vai receber:</h2>
     <ul class="recap reveal">
-      <li><span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Calculadora de Aportes</span><s>R$ 47</s></li>
-      <li><span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Guia das 5 Decisões</span><s>R$ 67</s></li>
-      <li><span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Mesada com Estrutura</span><s>R$ 47</s></li>
-      <li><span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Bônus 1: A Conquista</span><s>R$ 47</s></li>
-      <li><span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Bônus 2: A Carta para os 18</span><s>R$ 37</s></li>
+      <li><span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Calculadora de Aportes</span><s>R$ 87</s></li>
+      <li><span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Como Investir para o Seu Filho do Jeito Certo</span><s>R$ 67</s></li>
+      <li><span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Como Planejar a Mesada do Jeito Inteligente</span><s>R$ 57</s></li>
+      <li><span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Bônus 1: Do “Eu Quero” ao “Eu Conquistei”: o primeiro projeto do seu filho</span><s>R$ 47</s></li>
+      <li><span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Bônus 2: Carta para o Seu Filho Ler aos 18 anos</span><s>R$ 37</s></li>
     </ul>
     <div class="recap-total reveal">
-      <p class="muted" style="font-size:18px;line-height:1.5">Se você comprasse tudo separadamente, o valor seria <strong class="red">R$ 245</strong>.</p>
-      <p style="font-size:19px;line-height:1.5;font-weight:500">Mas hoje você recebe acesso completo por apenas <strong class="price">R$ 67.</strong></p>
+      <p class="muted" style="font-size:18px;line-height:1.5">Se você comprasse tudo separadamente, o valor seria <s class="red" style="font-weight:700">R$ 295</s>.</p>
+      <p style="font-size:19px;line-height:1.5;font-weight:500">Mas hoje você recebe acesso completo à Calculadora do Futuro do Meu Filho por apenas <strong class="price">R$ 67.</strong></p>
     </div>
   </div>
 </section>
@@ -406,11 +407,10 @@ footer a{color:#fff}
 <!-- 09 OFERTA -->
 <section id="oferta" class="sec dark">
   <div class="wrap">
-    <h2 class="h2 center reveal" style="max-width:800px">Seu filho vai continuar crescendo de qualquer jeito.</h2>
-    <p class="center reveal" style="margin-top:18px;max-width:680px;font-size:clamp(17px,2vw,20px);line-height:1.6;color:#C9D3E0">A pergunta é: você vai continuar dizendo ‘depois eu começo’ ou vai finalmente colocar esse futuro no papel?</p>
+    <h2 class="h2 center reveal" style="max-width:800px">Garanta seu acesso agora</h2>
     <div class="offer-card reveal">
-      <div class="ph">img/mockup-combo.jpg</div>
-      <p class="from">De <s>R$ 245</s> por apenas</p>
+      <img class="combo" src="img/mockup-combo.jpg" alt="Os 5 materiais da Calculadora do Futuro do Meu Filho" loading="lazy" width="1100" height="1005">
+      <p class="from">De <s>R$ 295</s> por apenas</p>
       <p class="parc js-parcelamento"></p>
       <p class="price">R$ 67</p>
       <p class="cash">à vista</p>
@@ -424,7 +424,7 @@ footer a{color:#fff}
       <h3 class="reveal">Compre agora e receba o acesso por e-mail:</h3>
       <div class="grid access-grid">
         <div class="acc reveal"><span class="n">1</span><h4>Acesse seu e-mail</h4><p>Após a confirmação do pagamento, você recebe as instruções de acesso.</p></div>
-        <div class="acc reveal"><span class="n">2</span><h4>Acesse seus materiais</h4><p>Faça uma cópia da Calculadora para a sua conta Google e abra o Guia das 5 Decisões, a Mesada com Estrutura e os bônus A Conquista e A Carta para os 18.</p></div>
+        <div class="acc reveal"><span class="n">2</span><h4>Acesse seus materiais</h4><p>Faça uma cópia da Calculadora para a sua conta Google e abra o Como Investir para o Seu Filho do Jeito Certo, o Como Planejar a Mesada do Jeito Inteligente e os bônus Do “Eu Quero” ao “Eu Conquistei” e Carta para o Seu Filho Ler aos 18 anos.</p></div>
         <div class="acc reveal"><span class="n">3</span><h4>Separe uma noite</h4><p>Coloque os números no papel e comece a construir seu plano.</p></div>
       </div>
     </div>
@@ -449,15 +449,14 @@ footer a{color:#fff}
 <!-- 11 AUTORIDADE -->
 <section class="sec white">
   <div class="author">
-    <div class="ph reveal">img/especialista.jpg</div>
-    <!-- Quando tiver a foto: <div class="photo reveal"><img src="img/especialista.jpg" alt="[PREENCHER NOME]"></div> -->
+    <div class="ph img-slot reveal">img/especialista.jpg<img src="img/especialista.jpg" alt="Rafael Garbelini" loading="lazy" onerror="this.remove()"></div>
     <div class="author-text reveal">
       <span class="label">QUEM CRIOU</span>
-      <h2>[PREENCHER NOME]</h2>
-      <p>[PREENCHER: experiência, formação, resultados, empresas/clientes e propósito]</p>
-      <hr>
-      <p class="quote">Não adianta passar 18 anos construindo um patrimônio para alguém que passou 18 anos sem aprender a lidar com dinheiro.</p>
-      <p>Foi dessa visão que nasceu a Calculadora do Futuro do Meu Filho: preparar o dinheiro para o filho — e o filho para o dinheiro.</p>
+      <h2>Rafael Garbelini</h2>
+      <p class="role">Consultor financeiro especialista em finanças comportamentais para famílias</p>
+      <p>Sou esposo, pai de duas meninas, e encontrei na consultoria financeira não apenas uma profissão, mas uma missão de vida. Hoje, guio centenas de famílias que confiam à minha estratégia mais de R$ 150 milhões em patrimônio.</p>
+      <p>Mas, para além dos números, meu compromisso é garantir a estrutura necessária para que cada projeto de vida se torne um legado seguro. Afinal, a verdadeira riqueza é a tranquilidade que você constrói para quem ama.</p>
+      <div class="author-close">Foi como pai que eu criei a Calculadora do Futuro do Meu Filho. Porque não adianta passar 18 anos construindo um patrimônio para alguém que passou 18 anos sem aprender a lidar com dinheiro. Preparar o dinheiro para o filho e o filho para o dinheiro.</div>
     </div>
   </div>
 </section>
@@ -467,15 +466,15 @@ footer a{color:#fff}
   <div class="wrap">
     <h2 class="h2 center reveal" style="max-width:800px">Comece hoje a construir o futuro que você quer proporcionar ao seu filho.</h2>
     <div class="offer-card bordered reveal">
-      <div class="ph">img/mockup-combo.jpg</div>
+      <img class="combo" src="img/mockup-combo.jpg" alt="Os 5 materiais da Calculadora do Futuro do Meu Filho" loading="lazy" width="1100" height="1005">
       <ul class="offer-list">
         <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Calculadora de Aportes</li>
-        <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Guia das 5 Decisões</li>
-        <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Mesada com Estrutura</li>
-        <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Bônus 1: A Conquista</li>
-        <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Bônus 2: A Carta para os 18</li>
+        <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Como Investir para o Seu Filho do Jeito Certo</li>
+        <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Como Planejar a Mesada do Jeito Inteligente</li>
+        <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Bônus 1: Do “Eu Quero” ao “Eu Conquistei”: o primeiro projeto do seu filho</li>
+        <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#17773F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Bônus 2: Carta para o Seu Filho Ler aos 18 anos</li>
       </ul>
-      <p class="from">De <s>R$ 245</s> por apenas</p>
+      <p class="from">De <s>R$ 295</s> por apenas</p>
       <p class="parc js-parcelamento"></p>
       <p class="price">R$ 67</p>
       <p class="cash">à vista</p>
@@ -499,9 +498,9 @@ footer a{color:#fff}
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Para qual idade é?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5650D" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><div><p>Para pais de filhos de 3 a 15 anos. A calculadora aceita qualquer idade até 17 anos, e o guia de mesada traz orientações por fase: 3–6, 7–10 e 11–15 anos.</p></div></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Eu já dou mesada para o meu filho. Preciso parar?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5650D" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><div><p>Não. O problema não é a mesada, é a mesada sem estrutura. O material mostra como organizar o dinheiro que seu filho já recebe para que ele aprenda a gastar, guardar e doar.</p></div></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">A Calculadora vai dizer qual investimento eu devo comprar?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5650D" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><div><p>Não. O material ajuda você a entender os tipos de investimento apresentados e as decisões envolvidas no planejamento. Ele não substitui uma recomendação individualizada de investimentos.</p></div></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Funciona no celular?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5650D" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><div><p>Funciona, mas a experiência é melhor no computador. A calculadora é uma planilha no Google Planilhas que fica salva na sua conta para sempre. Separe uma noite, sente com calma e preencha.</p></div></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">O pagamento é seguro?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5650D" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><div><p>Sim. O pagamento é processado pela plataforma de checkout utilizada na página.</p></div></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Como recebo meu acesso?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5650D" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><div><p>Após a confirmação da compra, você recebe por e-mail as instruções para acessar os materiais.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Funciona no celular?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5650D" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><div><p>Funciona, mas a experiência é melhor no computador. A calculadora é uma planilha no Google Planilhas que fica salva na sua conta para sempre. Separe uma noite, sente com calma e preencha.</p></div></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">E se eu comprar e não gostar?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B5650D" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="faq-a"><div><p>Você terá 7 dias de garantia, conforme as condições apresentadas no checkout.</p></div></div></div>
     </div>
   </div>
@@ -512,11 +511,10 @@ footer a{color:#fff}
 <!-- 14 RODAPÉ -->
 <footer>
   <div class="in">
-    <div class="links"><a href="#">Termos de Uso</a><span>·</span><a href="#">Política de Privacidade</a></div>
-    <p>[PREENCHER NOME / RAZÃO SOCIAL] · CNPJ: [PREENCHER] · [PREENCHER E-MAIL]</p>
-    <p>A Calculadora do Futuro do Meu Filho possui caráter educacional e informativo. Os exemplos, simulações e conteúdos apresentados não constituem promessa ou garantia de rentabilidade ou resultado financeiro. Decisões de investimento devem considerar a situação e os objetivos individuais de cada pessoa.</p>
-    <p>Este site não é afiliado ao Facebook ou à Meta.</p>
-    <p>Calculadora do Futuro do Meu Filho © 2026 — Todos os direitos reservados.</p>
+    <p class="f-name">Calculadora do Futuro do Meu Filho</p>
+    <p style="font-size:15px">Tem alguma dúvida? Mande pelo e-mail: contato@rafaelgarbelini.com.br</p>
+    <p class="small" style="margin-top:6px">Conteúdo educacional. As simulações não constituem promessa ou garantia de rentabilidade nem recomendação de investimento.</p>
+    <p class="small">Rafael Garbelini © 2026 — Todos os direitos reservados.</p>
   </div>
 </footer>
 
