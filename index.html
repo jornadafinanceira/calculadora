@@ -232,6 +232,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5F6PJ3RK');</script>
 <!-- End Google Tag Manager -->
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4071649043138000');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name: 'Calculadora do Futuro do Meu Filho', value: 67, currency: 'BRL'});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4071649043138000&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -541,7 +555,19 @@ const CHECKOUT_URL = "https://pay.hotmart.com/K108259517X";
 const PARCELAMENTO = "5x R$ 14,84"; /* conferir no checkout */
 
 /* Aplica link de checkout e texto de parcelamento */
-document.querySelectorAll('.js-checkout').forEach(a => a.href = CHECKOUT_URL);
+/* Repassa UTMs, fbclid etc. para o checkout Hotmart + rastreia clique */
+const params = new URLSearchParams(window.location.search);
+const utmCampaign = params.get('utm_campaign') || '';
+const utmContent  = params.get('utm_content') || '';
+if (utmCampaign || utmContent) params.set('sck', [utmCampaign, utmContent].filter(Boolean).join('|'));
+const checkoutFinal = CHECKOUT_URL + (params.toString() ? '?' + params.toString() : '');
+
+document.querySelectorAll('.js-checkout').forEach(a => {
+  a.href = checkoutFinal;
+  a.addEventListener('click', () => {
+    if (window.fbq) fbq('trackCustom', 'CliqueCheckout', {botao: a.id || 'sticky'});
+  });
+});
 /* Preço: parcelado em destaque e à vista embaixo. Sem PARCELAMENTO preenchido, mostra só o valor à vista. */
 const PRECO_A_VISTA = "R$ 67,00";
 if (PARCELAMENTO && !PARCELAMENTO.startsWith('[')) {
